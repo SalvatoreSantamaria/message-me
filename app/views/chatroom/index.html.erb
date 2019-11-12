@@ -8,17 +8,10 @@
         <div class = "ui fluid raised card chatbox">
             <div class = "content">
                 <div class="ui feed">
-                <div class="event">
-                    <%=@messages.each do |message| %>
-                        <div class="content">
-                            <div class="summary">
-                                <div><%=message.body%></div>
-                            </div>
-                        </div>
-                    <%end%>
+                    <%# rendering instance variable from the chatroom controller. Have to create a messages partial to do this. %>
+                    <%= render @messages %> 
                 </div>
             </div>
-        </div>
         <div class = "extra content">
             <form class= "ui reply form">
                 <div class="field">

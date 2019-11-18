@@ -1,0 +1,9 @@
+<% flash.each do |message_type, message_content| %>
+<%# message type will evaluate to either :success or :error (these are the keys) %>
+    <div class=" ui <%= message_type %> message"> 
+        <i class="close icon"></i>
+        <div class="header">
+        <%= message_content%>
+        </div>
+    </div>
+<% end %>

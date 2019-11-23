@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root 'chatroom#index'
   post 'message', to: 'messages#create'
 
+  mount ActionCable.server, at: '/cable'
+
 end

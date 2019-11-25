@@ -22,7 +22,8 @@ class MessagesController < ApplicationController
   def create
     message = current_user.messages.build(message_params)
     if message.save
-      redirect_to root_path
+      ActionCable.server.broadcast "chatroom_channel", foo: message.body #broadcast message to 'chatroom_channel' takes hash. key is foo, value is .body
+      # redirect_to root_path
     end
   end
 

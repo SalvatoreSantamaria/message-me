@@ -7,3 +7,4 @@ App.chatroom = App.cable.subscriptions.create "ChatroomChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
+    alert data.foo #data takes in a hash, here is it taking in foo from messages controller, create function.

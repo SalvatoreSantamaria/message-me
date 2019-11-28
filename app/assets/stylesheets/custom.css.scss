@@ -8,3 +8,9 @@
     height: 15em;
     overflow: auto; //this will add scrolling
 }
+
+.input {
+    button {
+        display: none; //hide input button
+    }
+}

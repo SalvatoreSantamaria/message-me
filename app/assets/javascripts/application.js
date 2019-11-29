@@ -24,13 +24,23 @@ scroll_bottom = function() {
     }
 }
 
+submit_message = function() { 
+    $('#message_body').on('keydown', function (e) { // look for enter key being pressed (code is 13)
+        if (e.keyCode == 13) {
+            $('button').click();
+            e.target.value = ''; //reset message input to be empty, this removes the last message 
+        } 
+    })
+}
+
 $(document).on('turbolinks:load', function() {
     $('.ui.dropdown').dropdown();
     $('.message .close').on('click', function() {
         $(this)
             .closest('.message')
             .transition('fade');
-    });   
+    });
+    submit_message(); //looking for 'enter' key press   
     scroll_bottom(); //call function every time pages loads
 })
 

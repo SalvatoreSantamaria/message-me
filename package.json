@@ -1,5 +1,8 @@
 {
   "name": "message-me",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "javascript-obfuscator": "^0.20.4"
+  }
 }
